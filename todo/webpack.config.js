@@ -2,15 +2,15 @@ const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: './client/index.html',
-  filename: 'index.html',
+  template: './app/index.html',
+  filename: './public/index.html',
   inject: 'body'
 });
 module.exports = {
-  entry: './client/index.js',
+  entry: './app/app.jsx',
   output: {
-    path: path.resolve('dist'),
-    filename: './client/index_bundle.js'
+    path: __dirname,
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
